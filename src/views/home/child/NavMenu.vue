@@ -52,3 +52,23 @@
         }
     }
 </script>
+<style lang="scss" scoped>
+    .el-submenu {
+        position: relative;
+        text-align: left;
+        &:hover {
+            &::before {
+                content: "";
+                background: #408EFF;
+                width: 5px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+
+        }
+    }
+
+</style>

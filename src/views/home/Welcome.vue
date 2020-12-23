@@ -1,6 +1,8 @@
 <template>
+<div>
   <el-carousel 
     :interval ="2000" 
+    autoplay
     type="card" 
     height="200px"
   >
@@ -8,6 +10,9 @@
       <img :src="img" class="swiper-image"/>
     </el-carousel-item>
   </el-carousel>
+  <div>Welcome to this system!!!</div>
+</div>
+  
 </template>
 <script>
 export default {
