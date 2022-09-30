@@ -33,7 +33,7 @@
             };
         },
         created() {
-            this.renderMenuList()
+          this.renderMenuList()
             this.activePath = window.sessionStorage.getItem('activePath')
         },
         methods: {
@@ -44,12 +44,14 @@
                 console.log(key, keyPath);
             },
             saveNavState(activePath) {
-                window.sessionStorage.setItem('activePath', activePath)
+              window.sessionStorage.setItem('activePath', activePath)
             },
             renderMenuList() {
                 /* 加载menu列表 */
                 this.menuList =
-                    this.$store.state.NavMenu.menuList
+                    this.$store.state.NavMenu.teacherMenuList;
+              console.log(this.menuList);
+              console.log(this.activePath);
             },
         }
     }

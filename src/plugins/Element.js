@@ -1,5 +1,10 @@
 import Vue from 'vue'
 import 'element-ui/lib/theme-chalk/index.css';
+import { Notification, Message, MessageBox } from 'element-ui'
+
+Vue.prototype.$notify = Notification
+Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox
 
 import {
     Button,
@@ -14,7 +19,13 @@ import {
     MenuItemGroup,
     Submenu,
     Carousel,
-    CarouselItem
+    CarouselItem,
+    Input,
+    Checkbox,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    Avatar,
 } from 'element-ui'
 
 const elements = [
@@ -30,8 +41,13 @@ const elements = [
     MenuItemGroup,
     Submenu,
     Carousel,
-    CarouselItem
-
+    CarouselItem,
+    Input,
+    Checkbox,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    Avatar,
 ]
 elements.forEach(item => {
     let no_list = [];

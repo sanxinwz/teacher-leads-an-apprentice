@@ -16,7 +16,7 @@ Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        redirect: '/login'
+        redirect: '/login  '
     },
     ...routerList
 ]
@@ -26,14 +26,15 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes
 })
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 router.beforeEach((to, from, next) => {
-    /* 比如做登陆验证 
-       if (to.name !== 'Home' && !isAuthenticated) next({ name: 'Home' })  
-       else next() 
-    */
-    // document.title = to.matched[0].name
+    const isAuthenticated = window.sessionStorage.getItem('token')
+    if (to.path !== '/login' && !isAuthenticated) next({ path: '/login' })
+    else next()
     next()
-
 })
 export default router

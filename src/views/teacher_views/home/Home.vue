@@ -3,7 +3,8 @@
     <el-container>
         <el-aside>
           <div class="logo-box">
-            师带徒管理系统
+            <a>师带徒管理系统</a>
+            <a>--教师端</a>
           </div>
           <NavMenu />
         </el-aside>
@@ -23,6 +24,7 @@
 
 <script>
 import NavMenu from './child/NavMenu'
+
   export default {
     name: 'Home',
     components: {NavMenu}
@@ -54,12 +56,13 @@ import NavMenu from './child/NavMenu'
     .logo-box {
       display: grid;
       place-items: center;
-      height: 90px;
+      height: 100px;
       width: 100%;
       font-size: 26px;
       font-family: Microsoft YaHei;
       font-weight: bold;
       color: #FFFFFF;
+      margin-top: 40px;
     }
   }
 

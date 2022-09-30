@@ -18,7 +18,7 @@ const devConfig = {
         open: true,
         inline: true, // 保存时页面刷新
         hot: true, // 保存时局部刷新
-        host: '10.1.27.121', // 允许外部ip访问
+        host: 'localhost', // 允许外部ip访问
         port: 9988, // 端口
         https: false, // 启用https
     },
@@ -61,6 +61,7 @@ const defaultConfig = {
 
 
 module.exports = {
+    publicPath: './',
     ...devConfig,
     ...commonConfig,
     ...defaultConfig
